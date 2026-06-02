@@ -1,56 +1,44 @@
-# UK Credit Analyst Portfolio
+Project 1 — Credit Assessment Memorandum: Funding Circle plc
 
-Independent credit analysis projects built to demonstrate financial analysis, 
-Python automation, and credit risk assessment skills targeting roles in 
-UK fintech lending and specialist banking.
+A full credit assessment memo on Funding Circle (LSE: FCH), 
+a UK-listed SME lending platform, written in the style of a 
+junior credit analyst.
 
----
+Covers:
+- Automated data pipeline pulling live financials via yfinance
+  with manual overrides from audited annual report (Notes 11, 12, 16)
+- Three-year financial analysis (2023–2025): twelve ratios covering
+  profitability, efficiency, credit quality, leverage and liquidity
+- ICR and DSCR calculated from first principles using SONIA + spread
+  methodology justified from Note 16 of the 2025 Annual Report
+- Internal risk grade: B- assigned via systematic scoring model
+- Covenant package: minimum ICR 1.0x, maximum D/E 2.0x, 
+  tested quarterly
+- Stress scenario: base, downside, severe — moderate stress triggers
+  ICR covenant breach
+- Proposed facility structure: £75m revolving credit, 1 year, 
+  SONIA + 280bps, first charge over loan book
+- Validated against analyst consensus (5 Buy recommendations) and
+  Bank of England Financial Stability Report 2025
 
-## Project 1 — Credit Assessment Memorandum: Funding Circle plc
+Key finding: ICR of 1.14x leaves minimal buffer — moderate stress 
+triggers covenant breach, supporting B- grade and Cautious Hold.
 
-A full credit assessment memo on Funding Circle (LSE: FCH), a UK-listed SME 
-lending platform, written in the style of a junior credit analyst.
-
-**Covers:**
-- Business overview and revenue model analysis
-- Three-year financial analysis (2023–2025): profit margin, cost-to-income 
-  ratio, expected credit losses, and NPL ratio
-- Four key risks: credit risk, funding risk, operational efficiency, 
-  and competitive risk
-- Credit recommendation with conditions (Cautious Hold)
-
-**Tools used:** Python, pandas, matplotlib, Yahoo Finance API, Excel
-
----
-
-## Project 2 — Automated Multi-Company Credit Screener
-
-A Python tool that automatically pulls live financial data for five UK 
-specialist lenders and produces a comparative credit dashboard.
-
-**Companies screened:** Funding Circle, Close Brothers, Paragon Banking, 
-OSB Group, Metro Bank
-
-**Metrics calculated automatically:** Profit margin, cost-to-income ratio, 
-return on equity
-
-**Key finding:** OSB Group and Paragon Banking are the strongest credit 
-performers in the UK specialist lending space. Metro Bank remains a 
-high-risk outlier at -52.3% profit margin following its 2023 restructuring.
-
-**Tools used:** Python, yfinance, pandas, matplotlib
-
----
-
-## Skills Demonstrated
-
-- Credit ratio analysis and interpretation
-- Financial statement reading (income statement, balance sheet)
-- Python automation for financial data retrieval
-- Data visualisation for analytical communication
-- Independent commercial research
-
----
+Tools used: Python, pandas, yfinance, Jupyter, Excel
+Data sources: yfinance, Funding Circle 2025 Annual Report, 
+BoE Financial Stability Report 2025
 
 *All analysis is for portfolio purposes only and does not constitute 
 financial advice.*
+
+Skills Demonstrated:
+- Full credit lifecycle: assessment, grading, structuring, 
+  monitoring, stress testing
+- Annual report analysis: extracting specific figures from 
+  notes to accounts
+- ICR and DSCR calculation from primary source data
+- Internal risk grading methodology
+- Covenant design and threshold calibration
+- Stress scenario modelling with macro validation
+- Data source validation and discrepancy identification
+- Python automation with single source of truth architecture
